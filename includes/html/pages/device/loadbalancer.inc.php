@@ -15,6 +15,10 @@ $type_text['ltm_bwc'] = 'LTM Bandwidth Controller';     // F5 BigIP
 $type_text['gtm_wide'] = 'GTM Wide IPs';                // F5 BigIP
 $type_text['gtm_pool'] = 'GTM Pools';                   // F5 BigIP
 $type_text['f5-cert'] = 'Certificates';                 // F5 BigIP
+$type_text['acos_slb_vs'] = 'Virtual Servers';          // A10 ACOS
+$type_text['acos_slb_vport'] = 'Virtual Services';      // A10 ACOS
+$type_text['acos_slb_pool'] = 'Service Groups';         // A10 ACOS
+$type_text['acos_slb_server'] = 'Real Servers';         // A10 ACOS
 
 print_optionbar_start();
 

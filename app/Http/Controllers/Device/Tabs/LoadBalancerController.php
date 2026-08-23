@@ -76,6 +76,25 @@ class LoadBalancerController implements DeviceTab
                 $this->tabs[] = 'f5-cert';
             }
         }
+
+        // A10 Networks ACOS / Thunder SLB
+        if ($device->os == 'acos') {
+            $component = new \LibreNMS\Component();
+            $component_count = $component->getComponentCount($device['device_id']);
+
+            if (isset($component_count['acos-slb-vs'])) {
+                $this->tabs[] = 'acos_slb_vs';
+            }
+            if (isset($component_count['acos-slb-vport'])) {
+                $this->tabs[] = 'acos_slb_vport';
+            }
+            if (isset($component_count['acos-slb-pool'])) {
+                $this->tabs[] = 'acos_slb_pool';
+            }
+            if (isset($component_count['acos-slb-server'])) {
+                $this->tabs[] = 'acos_slb_server';
+            }
+        }
     }
 
     public function visible(Device $device): bool
